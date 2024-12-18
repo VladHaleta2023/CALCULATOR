@@ -1,0 +1,156 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right,  rgb(79, 28, 126), rgb(67, 113, 197));
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background-color: rgb(32, 31, 31);
+    width: 100%;
+    max-width: 450px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: white;
+    padding: 8px;
+}
+
+.numberColor {
+    background-color: rgb(54, 51, 51);
+}
+
+.green {
+    background-color: green;
+}
+
+.element {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+    padding: 16px;
+    margin: 6px 12px;
+    width: 70px;
+    min-width: 70px;
+    height: 70px;
+    min-height: 70px;
+    vertical-align: baseline;
+    font-weight: normal;
+}
+
+.element.numberColor:hover {
+    background-color: rgb(81, 77, 77);
+}
+
+.element.purple:hover {
+    background-color:rgb(153, 63, 238);
+}
+
+.element.red:hover {
+    background-color:rgb(244, 71, 71);
+}
+
+.element.blue:hover {
+    background-color:rgb(148, 130, 251);
+}
+
+.element.green:hover {
+    background-color:rgb(78, 168, 78);
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color:mediumslateblue;
+}
+
+.element>.text {
+    position: relative; 
+    top: 4px;
+}
+
+.purple {
+    background-color:blueviolet;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    bottom: 0;
+    max-width: 450px;
+    height: 100vh;
+    user-select: none;
+}
+
+input.result {
+    width: 100%;
+    max-width: 450px;
+    background-color: rgb(57, 54, 54);
+    font-size: 32px;
+    color: white;
+    padding-block: 0px;
+    padding-inline: 0px;
+    border-width: 0px;
+    padding: 12px;
+    padding-bottom: 16px;
+    cursor: pointer;
+    outline: none;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+}
+
+input.result::selection {
+    background-color: blueviolet;
+}
+
+input.result::-moz-selection {
+    background-color: blueviolet;
+}
+
+@media only screen and (max-width: 450px) {
+    input.result {
+        width: 100vw;
+    }
+
+    .calculator {
+        width: 100vw;
+        justify-content: flex-end;
+    }
+
+    .content {
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    input.result {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+}
